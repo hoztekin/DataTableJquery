@@ -17,15 +17,15 @@ namespace DataTableJquery.Controllers
 
 		public IActionResult Index()
 		{
-			var result = db.customers.ToList();
-			return View(result);
-		}
-
-		public IActionResult GetCustomerList() 
-		{
 			
 			return View();
+		}
 
+		public IActionResult GetCustomerList()
+		{
+			var result = db.customers.ToList();
+			return new JsonResult(result);
+			//return View();
 		}
 	}
 }

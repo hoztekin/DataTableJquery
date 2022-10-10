@@ -12,15 +12,17 @@ namespace DataTableJquery.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
-		
+		private readonly AppDb db;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, AppDb db)
 		{
 			_logger = logger;
+			this.db = db;
 		}
 		
 		public IActionResult Index()
 		{
+			
 			return View();
 			
 		}

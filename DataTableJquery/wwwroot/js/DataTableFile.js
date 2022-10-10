@@ -1,6 +1,6 @@
-﻿//$(document).ready(function () {
-//	alert('ok');
-//});
+﻿$(document).ready(function () {
+	alert('ok');
+});
 
 $(document).ready(function () {
 
@@ -10,7 +10,7 @@ $(document).ready(function () {
 function GetCustomer() {
 
 	$.ajax({
-		url: '/Table/Index',
+		url: '/Table/GetEmployeeList',
 		type: 'Get',
 		dataType: 'json',
 		success: OnSuccess
@@ -39,7 +39,7 @@ function OnSuccess(response) {
 			{
 				data: 'firstname',
 				render: function (data, type, row, meta) {
-					return row.ID
+					return row.FirstName
 				}
 
 			}, 
@@ -47,7 +47,7 @@ function OnSuccess(response) {
 			{
 				data: 'lastname',
 				render: function (data, type, row, meta) {
-					return row.ID
+					return row.LastName
 				}
 
 			}, 
@@ -55,7 +55,7 @@ function OnSuccess(response) {
 			{
 				data: 'gender',
 				render: function (data, type, row, meta) {
-					return row.ID
+					return row.Gender
 				}
 
 			}, 
@@ -63,7 +63,7 @@ function OnSuccess(response) {
 			{
 				data: 'country',
 				render: function (data, type, row, meta) {
-					return row.ID
+					return row.Country
 				}
 
 			}, 
@@ -71,17 +71,17 @@ function OnSuccess(response) {
 			{
 				data: 'age',
 				render: function (data, type, row, meta) {
-					return row.ID
+					return row.Age
 				}
 
 			}, 
+
+			
+
+			
 		]
 	});
 }
 
 
-$('#DataTableData').DataTable({
-
-
-});
 
