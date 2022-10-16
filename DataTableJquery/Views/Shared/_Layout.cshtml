@@ -24,7 +24,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Table" asp-action="GetCustomerList">Data Table</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Table" asp-action="Index">Get Customer</a>
                         </li>
                     </ul>
                 </div>
@@ -43,8 +43,8 @@
         </div>
     </footer>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/datatable/jquery.datatables.js"></script>
-    <script src="~/datatable/jquery.datatables.min.js"></script>
+	<script src="~/datatable/jquery.dataTables.js"></script>
+    <script src="~/datatable/jquery.dataTables.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

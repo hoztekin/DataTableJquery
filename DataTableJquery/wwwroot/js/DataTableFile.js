@@ -1,6 +1,6 @@
-﻿$(document).ready(function () {
-	alert('ok');
-});
+﻿//$(document).ready(function () {
+//	alert('ok');
+//});
 
 $(document).ready(function () {
 
@@ -10,7 +10,7 @@ $(document).ready(function () {
 function GetCustomer() {
 
 	$.ajax({
-		url: '/Table/GetEmployeeList',
+		url: '/Table/GetCustomerList',
 		type: 'Get',
 		dataType: 'json',
 		success: OnSuccess
@@ -28,57 +28,53 @@ function OnSuccess(response) {
 		bPaginate: true,
 		data: response,
 		columns: [
-			{
-				data: 'id',
-				render: function (data, type, row, meta) {
-					return row.ID
-				}
-
-			}, 
-
-			{
-				data: 'firstname',
-				render: function (data, type, row, meta) {
-					return row.FirstName
-				}
-
-			}, 
-
-			{
-				data: 'lastname',
-				render: function (data, type, row, meta) {
-					return row.LastName
-				}
-
-			}, 
-
-			{
-				data: 'gender',
-				render: function (data, type, row, meta) {
-					return row.Gender
-				}
-
-			}, 
-
-			{
-				data: 'country',
-				render: function (data, type, row, meta) {
-					return row.Country
-				}
-
-			}, 
-
-			{
-				data: 'age',
-				render: function (data, type, row, meta) {
-					return row.Age
-				}
-
-			}, 
-
 			
+			{
+				data: 'ID',
+				render: function (data, type, row, meta) {
+					return row.id
+				}
 
-			
+			}, 
+
+			{
+				data: 'FIRSTNAME',
+				render: function (data, type, row, meta) {
+					return row.firstname
+				}
+
+			}, 
+
+			{
+				data: 'LASTNAME',
+				render: function (data, type, row, meta) {
+					return row.lastname
+				}
+
+			}, 
+
+			{
+				data: 'GENDER',
+				render: function (data, type, row, meta) {
+					return row.gender
+				}
+
+			}, 
+
+			{
+				data: 'COUNTRY',
+				render: function (data, type, row, meta) {
+					return row.country
+				}
+
+			}, 
+
+			{
+				data: 'AGE',
+				render: function (data, type, row, meta) {
+					return row.age
+				}
+			}, 	
 		]
 	});
 }
