@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
 	Layout = "_Layout";
 }
 
@@ -9,19 +9,19 @@
 }
 
 <div class="container">
-	<a class="btn btn-sm btn-primary m-2" asp-action="" asp-controller="Table">Upload File</a>
+	<a class="btn btn-sm btn-primary m-2" asp-action="ImportExcelFile" asp-controller="Excel">Upload File</a>
 	<h3 class="text-center text-success font-weight-bold">@TempData["message"]</h3>
 	<div class="row">
 		<div class="col-8 offset-2">
 			<table class="table table-bordered" id="DataTableData">
 				<thead>
 					<tr class="text-center">
-						<th>id</th>
-						<th>firstname</th>
-						<th>lastname</th>
-						<th>gender</th>
-						<th>country</th>
-						<th>age</th>
+						<th>Id</th>
+						<th>İsim</th>
+						<th>Soyisim</th>
+						<th>Cinsiyet</th>
+						<th>Ülke</th>
+						<th>Yaş</th>
 					</tr>
 				</thead>
 			</table>
@@ -31,6 +31,8 @@
 
 @section scripts {
 
-					<script src="~/js/datatablefile.js"></script>
+						<script src="~/js/datatablefile.js"></script>
+
+	
 
 }

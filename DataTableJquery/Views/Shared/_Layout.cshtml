@@ -26,6 +26,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Table" asp-action="Index">Get Customer</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Excel" asp-action="ImportExcelFile">Import File</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -46,6 +49,7 @@
 	<script src="~/datatable/jquery.dataTables.js"></script>
     <script src="~/datatable/jquery.dataTables.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

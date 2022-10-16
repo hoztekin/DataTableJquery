@@ -25,7 +25,6 @@ namespace DataTableJquery.Controllers
 		{
 			var result = db.customers.ToList();
 			return new JsonResult(result);
-			//return View();
 		}
 	}
 }
